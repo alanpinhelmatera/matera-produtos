@@ -50,7 +50,7 @@ const periodos = [
   }
 ];
 
-class Banco {
+class Gestao {
   constructor() {
     this.buscaDados();
   }
@@ -61,15 +61,15 @@ class Banco {
   }
 
   render() {
-    const ProdutosBanco = Produtos.bind(null, 'banco', this.produtos);
-    const PeriodosBanco = Periodos.bind(null, this.periodos);
+    const ProdutosGestao = Produtos.bind(null, 'gestao', this.produtos);
+    const PeriodosGestao = Periodos.bind(null, this.periodos);
     return `
-      ${ProdutosBanco()}
-      ${PeriodosBanco()}
+      ${ProdutosGestao()}
+      ${PeriodosGestao()}
   `;
   }
 }
 
-export default function BancoRender() {
-  return new Banco().render();
+export default function GestaoRender() {
+  return new Gestao().render();
 }
