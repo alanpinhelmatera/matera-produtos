@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .periodos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .periodos .periodo {
+    width: calc(50% - 1px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .periodos .periodo {
+    width: calc(25% - 2px);
+  }
+}

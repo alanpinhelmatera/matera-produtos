@@ -5,12 +5,11 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/index.js',
-    another: './src/another-module.js'
+    app: './src/index.js'
   },
   plugins: [
     new CleanWebpackPlugin(['build']),
-    new HtmlWebpackPlugin({ title: 'Matera Produtos' }),
+    new HtmlWebpackPlugin({ template: './public/index.html', favicon: './public/favicon.ico' }),
     new webpack.HotModuleReplacementPlugin()
   ],
   output: {
