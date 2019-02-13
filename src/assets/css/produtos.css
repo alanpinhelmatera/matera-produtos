@@ -1,8 +1,8 @@
 .produtos {
   display: inline-block;
   width: 100%;
-  border-top-right-radius: 0.875em;
-  border-top-left-radius: 0.875em;
+  border-top-right-radius: .875em;
+  border-top-left-radius: .875em;
   box-sizing: border-box;
   padding-right: 1em;
   padding-left: 1em;
@@ -10,8 +10,8 @@
 
 @media (min-width: 600px) {
   .produtos {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
   }
 }
 
@@ -37,8 +37,8 @@
 
 @media (min-width: 600px) {
   .produtos .checkbox {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
     width: 50%;
   }
 }

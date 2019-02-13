@@ -1,7 +1,11 @@
 body {
   font-family: "Montserrat", sans-serif;
-  padding: 1em 0.5em;
-  background: linear-gradient(to right, rgba(54, 206, 236, 1) 0%, rgba(22, 84, 155, 1) 100%);
+  padding: 1em .5em;
+  background: linear-gradient(
+    to right,
+    rgba(54, 206, 236, 1) 0%,
+    rgba(22, 84, 155, 1) 100%
+  );
 }
 
 @media (min-width: 375px) {
@@ -26,9 +30,4 @@ body {
   body {
     font-size: 1.625em;
   }
-}
-
-.container {
-  max-width: 1920px;
-  margin: 0 auto;
 }
