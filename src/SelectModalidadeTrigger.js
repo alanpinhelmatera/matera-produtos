@@ -1,8 +1,20 @@
-import data from './assets/data/data.json';
+import planilha from './Planilha';
 import renderProdutos from './Produtos';
 
 const modalidades = document.querySelector('.modalidades');
 const produtos = document.querySelector('.produtos');
+const periodos = document.querySelector('.periodos');
+
+function makeRequest(modalidade) {
+  planilha.getDados(modalidade).then(dados => {
+    if (dados && dados.produtos) {
+      renderProdutos(dados, produtos);
+    } else {
+      produtos.innerHTML = '';
+    }
+    periodos.innerHTML = '';
+  });
+}
 
 export default function selectModalidadeTrigger() {
   modalidades.addEventListener('click', e => {
@@ -17,6 +29,6 @@ export default function selectModalidadeTrigger() {
       produtos.classList.add('produtos--tema-gestao');
     }
 
-    renderProdutos(data[modalidade], produtos);
+    makeRequest(modalidade);
   });
 }

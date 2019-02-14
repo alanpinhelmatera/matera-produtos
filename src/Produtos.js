@@ -1,10 +1,10 @@
-function createMarkup(data) {
-  return data.produtos
+function createMarkup({ modalidade, produtos }) {
+  return produtos
     .map(
       produto => `
-        <label class="checkbox checkbox--tema-${data.modalidade}">
+        <label class="checkbox checkbox--tema-${modalidade}">
           <div class="checkbox__container">
-            <input class="checkbox__input" type="checkbox" value="${produto.id}">
+            <input class="checkbox__input" type="checkbox" data-id-produto="${produto.id}">
             <div class="checkbox__frame"></div>
             <div class="checkbox__background">
               <svg
@@ -31,7 +31,7 @@ function createMarkup(data) {
     .join('');
 }
 
-export default function renderProdutos(data, element) {
-  const markup = createMarkup(data);
+export default function renderProdutos(dados, element) {
+  const markup = createMarkup(dados);
   element.innerHTML = markup;
 }

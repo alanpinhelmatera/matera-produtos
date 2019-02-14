@@ -1,0 +1,57 @@
+{
+  "banco": {
+    "modalidade": "banco",
+    "produtos": [
+      {
+        "id": "sckxio_snjuishiao",
+        "nome": "Termo de Moedas"
+      },
+      {
+        "id": "acvuyZUnsisa_90sa",
+        "nome": "Renda Fixa"
+      },
+      {
+        "id": "mzxuaxn_msZa71Uy",
+        "nome": "Swap"
+      },
+      {
+        "id": "acvujfjUnsisa_90sa",
+        "nome": "Piloto de Cobrança"
+      },
+      {
+        "id": "acvuyZUnsisa_90sa",
+        "nome": "Cobrança"
+      },
+      {
+        "id": "acvsazz487sisa_90sa",
+        "nome": "Convênios"
+      },
+      {
+        "id": "acvzaU432xsisa_90sa",
+        "nome": "Compensação"
+      }
+    ],
+    "periodos": [
+      {
+        "titulo": "Jan/Fev/Mar",
+        "funcionalidades": [
+          {
+            "nome": "Tratamento de contratos com cotação D0",
+            "descritivo": "Tratamento para registro, valorização e resgate de contratos de Termo de Moedas com cotação para vencimento em D0.",
+            "produto": "sckxio_snjuishiao"
+          }
+        ]
+      },
+      {
+        "titulo": "Abr/Mai/Jun",
+        "funcionalidades": [
+          {
+            "nome": "Tratamento de contratos com cotação D0",
+            "descritivo": "Tratamento para registro, valorização e resgate de contratos de Termo de Moedas com cotação para vencimento em D0.",
+            "produto": "acvsazz487sisa_90sa"
+          }
+        ]
+      }
+    ]
+  }
+}
