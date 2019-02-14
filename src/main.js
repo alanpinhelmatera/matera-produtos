@@ -7,6 +7,6 @@ import './assets/css/produtos.css';
 import './assets/css/periodos.css';
 import './assets/css/periodo.css';
 import './assets/css/checkbox.css';
-import cabecalhoLoadTrigger from './CabecalhoTrigger';
+import selectModalidadeTrigger from './SelectModalidadeTrigger';
 
-cabecalhoLoadTrigger();
+selectModalidadeTrigger();

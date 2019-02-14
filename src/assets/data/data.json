@@ -1,0 +1,40 @@
+{
+  "banco": {
+    "modalidade": "banco",
+    "produtos": [
+      {
+        "id": "acvuyZUnsisa_90sa",
+        "nome": "Renda Fixa"
+      }
+    ],
+    "periodos": [
+      {
+        "titulo": "Jan/Fev",
+        "produtos": [
+          {
+            "id": "acvuyZUnsisa_90sa"
+          }
+        ]
+      }
+    ]
+  },
+  "gestao": {
+    "modalidade": "gestao",
+    "produtos": [
+      {
+        "id": "nmsik2_scq10i2uAi",
+        "nome": "Gestão Contábil"
+      }
+    ],
+    "periodos": [
+      {
+        "titulo": "Jan/Fev",
+        "produtos": [
+          {
+            "id": "nmsik2_scq10i2uAi"
+          }
+        ]
+      }
+    ]
+  }
+}

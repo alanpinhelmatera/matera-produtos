@@ -11,6 +11,7 @@
   padding: 0.4em 1em;
   border-top-right-radius: 1em;
   border-top-left-radius: 1em;
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

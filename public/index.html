@@ -8,9 +8,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:500,600" />
   </head>
   <body>
-    <header class="container cabecalho"></header>
+    <header class="container cabecalho">
+      <img class="cabecalho__logo" src="./logo.png" />
+      <h1 class="cabecalho__titulo-principal">Selecione a modalidade desejada</h1>
+    </header>
     <main class="container">
-      <ul class="modalidades"></ul>
+      <ul class="modalidades">
+        <li>
+          <a class="modalidades__link modalidades__link--tema-banco" data-modalidade="banco">
+            Matera Banco
+          </a>
+        </li>
+        <li>
+          <a class="modalidades__link modalidades__link--tema-gestao" data-modalidade="gestao">
+            Matera Gestão
+          </a>
+        </li>
+      </ul>
       <div class="produtos"></div>
       <div class="periodos"></div>
     </main>

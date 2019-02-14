@@ -6,9 +6,9 @@
 
 .checkbox__container {
   position: relative;
-  height: .875em;
-  width: .875em;
-  margin-right: .5em;
+  height: 0.875em;
+  width: 0.875em;
+  margin-right: 0.5em;
 }
 
 .checkbox__input {
@@ -51,7 +51,7 @@
 
 .checkbox__label {
   display: inline-block;
-  font-size: .75em;
+  font-size: 0.75em;
   font-weight: 600;
 }
 
@@ -63,10 +63,7 @@
   background-color: #fff;
 }
 
-.checkbox--tema-banco
-  .checkbox__input:checked
-  ~ .checkbox__background
-  .checkbox__checkmark-path {
+.checkbox--tema-banco .checkbox__input:checked ~ .checkbox__background .checkbox__checkmark-path {
   stroke: #185ea2;
 }
 
@@ -82,10 +79,7 @@
   background-color: #185ea2;
 }
 
-.checkbox--tema-gestao
-  .checkbox__input:checked
-  ~ .checkbox__background
-  .checkbox__checkmark-path {
+.checkbox--tema-gestao .checkbox__input:checked ~ .checkbox__background .checkbox__checkmark-path {
   stroke: #f2eeee;
 }
 
