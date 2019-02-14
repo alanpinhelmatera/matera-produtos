@@ -10,11 +10,14 @@ export default (function planilha() {
     },
 
     async getPeriodos(idsProdutosSelecionados) {
-      return dadosInterno.periodos.filter(p =>
-        p.funcionalidades
-          .map(f => f.produto)
-          .some(idProduto => idsProdutosSelecionados.includes(idProduto))
-      );
+      return {
+        ...dadosInterno,
+        periodos: dadosInterno.periodos.filter(p =>
+          p.produtos
+            .map(prod => prod.id)
+            .some(idProduto => idsProdutosSelecionados.includes(idProduto))
+        )
+      };
     }
   };
 })();
