@@ -9,7 +9,19 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(['build']),
-    new HtmlWebpackPlugin({ template: './public/index.html', favicon: './public/favicon.ico' }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      favicon: './public/favicon.ico',
+      minify: {
+        minifyCSS: true,
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        useShortDoctype: true
+      }
+    }),
     new webpack.HotModuleReplacementPlugin()
   ],
   output: {
