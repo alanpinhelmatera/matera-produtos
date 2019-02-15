@@ -147,6 +147,7 @@
           Cantarell, 'Helvetica Neue', sans-serif;
         padding: 1em 0.5em;
         background: linear-gradient(to right, rgba(54, 206, 236, 1) 0%, rgba(22, 84, 155, 1) 100%);
+        overflow-y: scroll;
       }
 
       @media (min-width: 375px) {
@@ -220,6 +221,15 @@
       .modalidades__link--tema-gestao {
         color: #185ea2;
         background-color: #f2eeee;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0.1;
+        }
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>

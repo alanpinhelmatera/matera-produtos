@@ -1,16 +1,16 @@
 function createMarkup({ produtos, periodos }) {
   return periodos
     .map(
-      p => `
+      periodo => `
         <div class="periodo">
-          <h2 class="periodo__titulo">${p.titulo}</h2>
-          ${p.produtos
+          <h2 class="periodo__titulo">${periodo.titulo}</h2>
+          ${periodo.produtos
             .map(
-              prod => `
+              produto => `
                 <h3 class="periodo__produto">${
-                  produtos.find(produto => produto.id === prod.id).nome
+                  produtos.find(infoProduto => infoProduto.id === produto.id).nome
                 }</h3>
-                ${prod.funcionalidades
+                ${produto.funcionalidades
                   .map(
                     f => `
                       <button class="periodo__funcionalidade">

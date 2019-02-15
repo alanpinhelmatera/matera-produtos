@@ -10,13 +10,20 @@ export default (function planilha() {
     },
 
     async getPeriodos(idsProdutosSelecionados) {
-      return {
-        ...dadosInterno,
-        periodos: dadosInterno.periodos.filter(p =>
-          p.produtos
-            .map(prod => prod.id)
+      const periodos = dadosInterno.periodos
+        .filter(periodo =>
+          periodo.produtos
+            .map(produto => produto.id)
             .some(idProduto => idsProdutosSelecionados.includes(idProduto))
         )
+        .map(periodo => ({
+          ...periodo,
+          produtos: periodo.produtos.filter(produto => idsProdutosSelecionados.includes(produto.id))
+        }));
+
+      return {
+        ...dadosInterno,
+        periodos
       };
     }
   };

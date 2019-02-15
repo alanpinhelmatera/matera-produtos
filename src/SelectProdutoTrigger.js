@@ -5,7 +5,9 @@ const produtos = document.querySelector('.produtos');
 const periodos = document.querySelector('.periodos');
 
 function makeRequest(idsProdutosSelecionados) {
-  planilha.getPeriodos(idsProdutosSelecionados).then(dados => renderPeriodos(dados, periodos));
+  planilha.getPeriodos(idsProdutosSelecionados).then(dados => {
+    renderPeriodos(dados, periodos);
+  });
 }
 
 export default function selectProdutoTrigger() {
