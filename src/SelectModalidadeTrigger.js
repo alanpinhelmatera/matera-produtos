@@ -1,5 +1,5 @@
 import planilha from './Planilha';
-import renderProdutos from './Produtos';
+import renderProdutos from './ProdutoList';
 
 const modalidades = document.querySelector('.modalidades');
 const produtos = document.querySelector('.produtos');

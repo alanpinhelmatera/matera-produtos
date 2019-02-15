@@ -1,12 +1,16 @@
 import planilha from './Planilha';
-import renderPeriodos from './Periodos';
+import renderPeriodos from './PeriodoList';
 
 const produtos = document.querySelector('.produtos');
 const periodos = document.querySelector('.periodos');
+let ultimaSelecaoPeriodos = [];
 
 function makeRequest(idsProdutosSelecionados) {
   planilha.getPeriodos(idsProdutosSelecionados).then(dados => {
-    renderPeriodos(dados, periodos);
+    if (JSON.stringify(dados.periodos) !== JSON.stringify(ultimaSelecaoPeriodos)) {
+      renderPeriodos(dados, periodos);
+      ultimaSelecaoPeriodos = dados.periodos;
+    }
   });
 }
 
