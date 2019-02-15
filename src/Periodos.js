@@ -1,30 +1,38 @@
-function createMarkup({ produtos, periodos }) {
+function createMarkupFuncionalidade(funcionalidades) {
+  return funcionalidades
+    .map(
+      funcionalidade => `
+        <button class="periodo__funcionalidade">
+          ${funcionalidade.nome}
+        </button>
+        <div class="periodo__descritivo">
+          ${funcionalidade.descritivo}
+        </div>
+      `
+    )
+    .join('');
+}
+
+function createMarkupProdutos(produtos, todosProdutos) {
+  return produtos
+    .map(
+      produto => `
+      <h3 class="periodo__produto">${
+        todosProdutos.find(infoProduto => infoProduto.id === produto.id).nome
+      }</h3>
+      ${createMarkupFuncionalidade(produto.funcionalidades)}
+    `
+    )
+    .join('');
+}
+
+function createMarkup({ produtos: todosProdutos, periodos }) {
   return periodos
     .map(
       periodo => `
         <div class="periodo">
           <h2 class="periodo__titulo">${periodo.titulo}</h2>
-          ${periodo.produtos
-            .map(
-              produto => `
-                <h3 class="periodo__produto">${
-                  produtos.find(infoProduto => infoProduto.id === produto.id).nome
-                }</h3>
-                ${produto.funcionalidades
-                  .map(
-                    f => `
-                      <button class="periodo__funcionalidade">
-                        ${f.nome}
-                      </button>
-                      <div class="periodo__descritivo">
-                        ${f.descritivo}
-                      </div>
-                    `
-                  )
-                  .join('')}
-              `
-            )
-            .join('')}
+          ${createMarkupProdutos(periodo.produtos, todosProdutos)}
         </div>
       `
     )
