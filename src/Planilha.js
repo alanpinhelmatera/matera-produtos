@@ -3,7 +3,7 @@ import mapeia from './Mapeia';
 
 export default (function planilha() {
   const api = 'https://spreadsheets.google.com/feeds/list/';
-  const key = '1tliRVC8jhAiBL7RVvgYP-SkanrkNo0CPrgXTuEy7A-0';
+  const key = '1WAX4UxUdVX-6q1W1oXrAgpv7Eh1OKfxQeFcUwDA5Bws';
   const aba = { banco: 1, gestao: 2 };
 
   let dadosInterno = [];
