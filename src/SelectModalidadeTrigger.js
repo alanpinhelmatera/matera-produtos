@@ -9,10 +9,7 @@ function makeRequest(modalidade) {
   planilha.getDados(modalidade).then(dados => {
     if (dados && dados.produtos) {
       renderProdutos(dados, produtos);
-    } else {
-      produtos.innerHTML = '';
     }
-    periodos.innerHTML = '';
   });
 }
 
@@ -20,6 +17,9 @@ export default function selectModalidadeTrigger() {
   modalidades.addEventListener('click', e => {
     const { target } = e;
     const modalidade = target.getAttribute('data-modalidade');
+
+    produtos.innerHTML = '';
+    periodos.innerHTML = '';
 
     if (modalidade === 'banco') {
       produtos.classList.remove('produtos--tema-gestao');
