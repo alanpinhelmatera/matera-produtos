@@ -1,7 +1,7 @@
 .periodos {
   display: grid;
-  grid-row-gap: 0.2em;
-  grid-column-gap: 0.2em;
+  grid-row-gap: 0.125em;
+  grid-column-gap: 0.125em;
 }
 
 @media (min-width: 768px) {
