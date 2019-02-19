@@ -1,9 +1,5 @@
 .periodo {
-  display: inline-block;
   text-align: center;
-  width: 100%;
-  margin-bottom: 2px;
-  box-sizing: border-box;
   padding: 1em;
   background-color: #fff;
 }
