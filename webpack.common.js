@@ -26,8 +26,7 @@ module.exports = {
   ],
   output: {
     filename: '[name].[hash].js',
-    path: path.resolve(__dirname, 'build'),
-    publicPath: '/matera-produtos'
+    path: path.resolve(__dirname, 'build')
   },
   module: {
     rules: [
