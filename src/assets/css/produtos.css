@@ -1,17 +1,32 @@
 .produtos {
-  display: inline-block;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0.5em 1em;
   border-top-right-radius: 0.875em;
   border-top-left-radius: 0.875em;
-  box-sizing: border-box;
-  padding-right: 1em;
-  padding-left: 1em;
 }
 
 @media (min-width: 600px) {
   .produtos {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1130px) {
+  .produtos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .produtos {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -23,41 +38,9 @@
   background-color: #f2eeee;
 }
 
-@media (min-width: 600px) {
-  .produtos {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
 .produtos .checkbox {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  justify-self: start;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
   animation: fadein 1s ease-in-out;
-}
-
-@media (min-width: 600px) {
-  .produtos .checkbox {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    width: 50%;
-  }
-}
-
-@media (min-width: 800px) {
-  .produtos .checkbox {
-    width: 33.333%;
-  }
-}
-
-@media (min-width: 1130px) {
-  .produtos .checkbox {
-    width: 25%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .produtos .checkbox {
-    width: 20%;
-  }
 }
